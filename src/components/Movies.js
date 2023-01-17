@@ -27,11 +27,15 @@ function Movies() {
         <div key={movie.title}>
           <p>Title: {movie.title}</p>
           <p>Time: {movie.time}</p>
+          <ul>
+            {movie.genres.map((genre) => (
+              <li key={genre}>{genre}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>
   );
 }
-
 
 export default Movies;
